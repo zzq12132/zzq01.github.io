@@ -1,0 +1,210 @@
+@charset "utf-8";
+.mid{
+    height: 139em;
+    width: 100vw;
+}
+
+.headimg{
+    top: 0px;
+    height: 250px;
+    width: 100%;
+    padding-top: 3em;
+    background-image: url("../images/headbg.jpg");
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 5px solid #000;
+    animation: headload 0.9s linear;
+    /* background-color: brown; */
+}
+.headimg h2{
+    color:aliceblue;
+    font-size: 5rem;
+    padding-top: 20px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.mid .ab{
+    width: 800px;
+    height: 310px;
+    box-shadow: 0 0 15px rgb(196, 166, 166);
+    background: #A77049;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.a1 .img{
+    background-image: url("../images/pho01.jpg");
+}
+.a2 .img{
+    background-image: url("../images/pho02.jpg");
+}
+.a3 .img{
+    background-image: url("../images/pho03.jpg");
+}
+.a4 .img{
+    background-image: url("../images/pho04.jpg");
+}
+.a5 .img{
+    background-image: url("../images/pho05.jpg");
+}
+
+.ab p{
+    word-wrap: break-word;
+    color:aliceblue;
+    line-height: 27px;
+}
+
+.ab .txt{
+    font-size: 1.5rem;
+    width: 400px;
+    margin: 0 50px 0 50px;
+}
+.ab h2{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.ab .img{
+    width: 300px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.5s ease 0s;
+}
+.ab .img:hover{
+    transform: scale(1.1);
+}
+.ab .imghid{
+    overflow: hidden;
+}
+.a1{
+    margin-left: 45%;
+    animation: a1load 2.5s linear;
+    transition: 0.5s  1s;
+}
+.a2{
+    margin-left: 10%;
+    animation: a2load 3.6s linear;
+    transition: 0.5s;
+}
+.a3{
+    margin-left: 45%;
+    animation: a3load 4.8s linear;
+    transition: 0.5s;
+}
+.a4{
+    margin-left: 10%;
+    animation: a2load 6.0s linear;
+    transition: 0.5s;
+}
+.a5{
+    margin-left: 45%;
+    animation: a3load 7.2s linear;
+    transition: 0.5s;
+}
+@keyframes a1load{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 40px;
+    }
+}
+@keyframes a2load{
+    0%{
+        
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes a3load{
+    0%{
+        
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes a4load{
+    0%{
+        
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes a5load{
+    0%{
+        
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes headload{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 240px;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1400px) {
+    .a1{
+        margin-left: 26%;
+        animation: a1load 2.5s linear;
+        transition: 0.5s  1s;
+    }
+    .a2{
+        margin-left: 10%;
+        animation: a2load 3.6s linear;
+        transition: 0.5s;
+    }
+    .a3{
+        margin-left: 26%;
+        animation: a3load 4.8s linear;
+        transition: 0.5s;
+    }
+    .a4{
+        margin-left: 10%;
+        animation: a2load 6.0s linear;
+        transition: 0.5s;
+    }
+    .a5{
+        margin-left: 26%;
+        animation: a3load 7.2s linear;
+        transition: 0.5s;
+    }
+}

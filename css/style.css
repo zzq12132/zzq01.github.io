@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+body {
+    background-color: #593A28;
+    height: 230rem;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+section {
+  /* padding: 3rem 9%; */
+  width: 100%;
+}
+html {
+  font-size: 62.5%;
+  /* height: 200rem; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+/* 导航条开始 */
+
+ .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   background: #402A1D;
+   padding: 0.5rem 3%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+ }
+
+ .header img {
+   height: 60px;
+   width: 60px;
+   text-transform: capitalize;
+ }
+ .header .navbar a {
+   font-size: 2rem;
+   color: #fff;
+   text-transform: capitalize;
+   margin: 0 1rem;
+ }
+ .header .navbar a:hover {
+   color: #fff;
+ }
+ .header .icons div,
+.header .icons a {
+  margin-left: 30px;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  background: #fff;
+  color: #000;
+  margin-left: .5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header .icons div:hover,
+.header .icons a:hover {
+  background: #402A1D;
+  color: #fff;
+}
+
+/* 改用子元素选择器，方便后面的控制 */
+.navbar>ul {
+  list-style: none;
+}
+
+/* 利用伪元素清理浮动 */
+.navbar>ul::after {
+  display: block;
+  content: '';
+  clear  : both;
+}
+
+
+.navbar>ul>li {
+  position: relative;
+  float   : left;
+  width   : auto;
+}
+
+
+
+.navbar>ul>li>a {
+  display: block;
+
+  color           : #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size  : 20px;
+  font-weight: bold;
+
+  line-height: 60px;
+
+  min-width: 60px;
+
+  padding: 0 20px;
+
+  text-decoration: none;
+
+  transition: all .3s ease-in-out;
+
+}
+
+.navbar>ul>li:hover>a {
+  background-color: #593A28;
+}
+
+/* 稍后重写子菜单样式 */
+
+/* 开始写子菜单 */
+
+/* 处理弹出 */
+/* 这里顺便解决上一个视频中的bug */
+/* 子菜单通过透明度隐藏，但是实际还是占用空间，鼠标移入这个空间时，子菜单也会显示 */
+
+.sub {
+  /* 这里一定要采用绝对定位 */
+  position: absolute;
+  /* 这样才能通过100%控制当前层不超过父基层 */
+  width   : 100%;
+  /* 让子菜单高度初始化为0 */
+  height  : 0;
+  /* 超出部分隐藏 */
+  overflow: hidden;
+
+  /* background-color: #F97F51; */
+
+}
+/* 鼠标移入时，调整高度为auto显示子菜单 */
+.navbar>ul>li:hover .sub{
+  height: auto;
+}
+
+/* 同时会位移ul 形成弹出效果 */
+.sub>ul {
+  list-style: none;
+
+  /* background-color: #fdcb6e; */
+  /* 让ul初始时移动到.sub的外面 */
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+}
+
+.navbar>ul>li:hover .sub>ul{
+  transform: translateY(0);
+}
+
+/* 下边线 */
+.sub>ul>li {
+  border-bottom: 1px solid #593A28;
+}
+
+/* 最后一个菜单项取消下边线 */
+.sub>ul>li:last-child {
+  border-bottom: none;
+}
+
+
+/* 菜单项 */
+.sub>ul>li>a {
+  display: block;
+
+  background-color: #593A28;
+  color           : #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size  : 20px;
+
+  line-height: 30px;
+
+  padding    : 15px 20px;
+
+  text-decoration: none;
+
+  transition: all .3s ease-in-out;
+
+}
+
+.sub>ul>li>a:hover{
+  background-color: #555;
+}
+
+/* 导航条结束 */
+
+/* 版权标签开始 */
+#footer{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+  height: 7rem;
+  background-color: #590202; 
+  display: flex;
+  justify-content: center;
+}
+#footer p{
+  color:aliceblue;
+  line-height: 3rem;
+  display: flex; 
+}
+
+/* 版权标签结束 */
+

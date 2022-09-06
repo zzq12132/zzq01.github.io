@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap");
+
+/* 视差滚动 开始*/
+.home {
+    position: relative;
+    /* width: 115%; */
+    height: 82rem;
+    top: 6rem;
+    bottom: 7rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #593A28, transparent);
+    z-index: 10;
+}
+
+.home:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #593A28;
+    z-index: 10;
+    mix-blend-mode: color;
+}
+
+.home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    font-size: 7em;
+    /* align-items: center; */
+    z-index: 1
+}
+
+#road {
+    z-index: 2;
+}
+
+/* 视差滚动结束 */
+
+/* 底部图片开始 */
+
+.labels {
+    height: 151em;
+    /* background-color: aquamarine; */
+    display: flex;
+    margin-top: 25rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label_top {
+    width: 74%;
+    height: 40rem;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+}
+
+.top_left {
+    flex:1 1 0rem;
+    width: 33rem;
+    height: 38rem;
+    margin: 3em 2em 2em 0;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #c3a595;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.top_center {
+    flex:1 1 0rem;
+    width: 33rem;
+    height: 38rem;
+    margin: 3em 2em 2em 0;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #c3a595;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.top_right {
+    flex:1 1 0rem;
+    width: 33rem;
+    height: 38rem;
+    margin: 3em 0 2em 0;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #c3a595;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.label_top .txt {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.label_top .star {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.label_top .img {
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    /* background-color: black; */
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.5s ease 0s;
+}
+
+.label_top .img:hover {
+    transform: scale(1.1);
+}
+
+.label_top .imghid {
+    overflow: hidden;
+}
+
+.label_bottom {
+    width: 74%;
+    height: 30rem;
+    /* background-color: rgb(226, 43, 58); */
+    display: flex;
+    align-items: center;
+}
+
+.bottom_left {
+    width: 31.5rem;
+    height: 30rem;
+    margin: 3em 1em 2em 1em;
+    flex:1 1 0rem;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #c3a595;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.bottom_left .img {
+    float: right;
+    margin-top: 10px;
+}
+
+.bottom_right {
+    flex:1 1 0rem;
+    width: 31.5rem;
+    height: 30rem;
+    float: left;
+    margin: 3em 0 2em 0;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    background-color: #c3a595;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.bottom_right .img {
+    margin-top: 10px;
+    float: right;
+}
+
+.label_bottom .txt {
+    margin: 90px 0 40px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.label_bottom .star {
+    margin: 50px 0 40px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.label_bottom .img {
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.5s ease 0s;
+}
+
+.label_bottom .img:hover {
+    transform: scale(1.1);
+}
+
+.label_bottom .imghid {
+    overflow: hidden;
+}
+
+/* 底部图片结束 */
