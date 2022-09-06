@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名著书屋</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+<!-- 导航部分开始 -->
+    <header class="header">
+
+            <!-- <a href="#" class="logo">Christmas</a> -->
+            <img src="./images/booklogo1.png" alt="">
+         
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="./index.html">Home</a> </li>
+                    <li>
+                        <a href="#">&emsp;&emsp;&emsp;Books&emsp;&emsp;&emsp;</a>
+                        <!-- 改变原有子菜单结构 -->
+                        <!-- 嵌套一层div -->
+                        <div class="sub">
+                            <ul>
+                                <li> <a href="./html/book1.html">《Les Misérables》</a></li>
+                                <li> <a href="./html/book2.html">《David Copperfield 》</a></li>
+                                <li> <a href="./html/book3.html">《The Hunchback of Notre Dame 》</a></li>
+                                <li> <a href="./html/book4.html">《Le Rouge et le Noir 》</a></li>
+                                <li> <a href="./html/book5.html">《Война и мир 》</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./html/appreciate.html">Appreciate</a>
+                    </li>
+                    <li> <a href="./html/feeling.html">Feeling</a> </li>
+                    <li> <a href="./html/contact.html">Contact Us</a> </li>
+                </ul>
+            </nav>
+         
+            <div class="icons">
+               <div id="menu-btn" class="fas fa-bars"></div>
+               <div id="search-btn" class="fas fa-search"></div>
+               <a href="#" class="fas fa-heart"></a>
+               <a href="http://book.dangdang.com/" class="fas fa-shopping-cart"></a>
+            </div>         
+    </header>  
+<!--导航部分结束-->
+
+<!-- 视差部分开始-->
+<section>
+    <div class="home" id="home" >
+        <img id="bg" src="./images/bg.jpg" alt="">
+        <img id="moon" src="./images/moon.png" alt="">
+        <img id="mountain" src="./images/mountain.png" alt="">
+        <img id="book" src="./images/book3.png" alt="">
+        <h2 id="text">Sunrise illuminates the earth,<br>
+            &emsp;&emsp;&emsp;reading soberly.</h2>
+    </div>
+    <script>
+        let bg = document.getElementById('bg');
+        let moon = document.getElementById('moon');
+        let mountain = document.getElementById('mountain');
+        let road = document.getElementById('road');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY
+            bg.style.top = value * 0.5 + 'px'
+            moon.style.left = -value * 0.5 + 'px'
+            mountain.style.top = -value * 0.15 + 'px'
+            road.style.top = value * 0.15 + 'px'
+            text.style.top = value * 1 + 'px' 
+        })
+    </script>
+<!--视差部分结束-->
+
+<!--底部图片开始-->
+    <div class="labels">
+        <div class="label_top">
+                <div class="top_left ">
+                    <div class="img">
+                    <a href="./html/book1.html">
+                    <img src="./images/beican.png " height="280px" width="320px" alt=""></a>
+                    </div>  
+                    <div class="txt">
+                    <h2>author：Hugo 雨果</h2>
+                    </div>
+                    <div class="star"><h2>evaluate:&nbsp;&nbsp;★★★★★</h2>
+                    </div>
+                </div>
+                <div class="top_center">
+                    <div class="img">
+                    <a href="./html/book2.html" target="_blank">
+                    <img src="./images/dawei1.png" height="280px" width="320px" alt=""></a>
+                    </div>  
+                    <div class="txt">
+                    <h2>author：Charles Dickens</h2>
+                    </div>
+                    <div class="star"><h2>evaluate:&nbsp;&nbsp;★★★★★</h2></div>
+                </div>
+                <div class="top_right">
+                    <div class="img">
+                    <a href="./html/book3.html" target="_blank">
+                    <img src="./images/bali.png" height="280px" width="330px" alt=""></a>
+                    </div>  
+                    <div class="txt">
+                    <h2>author：Hugo 雨果</h2>
+                    </div>
+                    <div class="star"><h2>evaluate:&nbsp;&nbsp;★★★★★</h2></div>
+                </div>
+        </div>
+        <div class="label_bottom">
+            <div class="bottom_left">
+                <div class="img">
+                <a href="./html/book4.html">
+                <img src="./images/hongyuhei.png " height="280px" width="250px" alt=""></a>
+                </div>  
+                <div class="txt">
+                <h2>author：Stendhal </h2>
+                </div>
+                <div class="star"><h2>evaluate:&nbsp;&nbsp;★★★★★</h2>
+                </div>
+            </div>
+            <div class="bottom_right ">
+                <div class="img">
+                <a href="./html/book5.html">
+                <img src="./images/war.png " height="280px" width="250px" alt=""></a>
+                </div>  
+                <div class="txt">
+                <h2>author：列夫·托尔斯泰</h2>
+                </div>
+                <div class="star"><h2>evaluate:&nbsp;&nbsp;★★★★★</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--底部图片结束-->
+
+
+</section>
+</body>
+
+</html>
